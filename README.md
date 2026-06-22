@@ -4,7 +4,7 @@
 
 $$\text{Attention}(Q, K, V) = \text{softmax}(Q K^T) V,$$
 
-where $Q, K, V \in \mathbb{R}^{N \times C}$ with $N$ nodes and $C$ feature dimensions. The computational steps are: (1) $Q K^T$ computes an $N \times N$ attention matrix with complexity $O(N^2 C)$; (2) applying softmax to the $N \times N$ matrix has complexity $O(N^2)$; (3) multiplying the $N \times N$ matrix with $V$ has complexity $O(N^2 C)$. The total complexity is $O(N^2 C)$, which is quadratic in $N$.
+1where $Q, K, V \in \mathbb{R}^{N \times C}$ with $N$ nodes and $C$ feature dimensions. The computational steps are: (1) $Q K^T$ computes an $N \times N$ attention matrix with complexity $O(N^2 C)$; (2) applying softmax to the $N \times N$ matrix has complexity $O(N^2)$; (3) multiplying the $N \times N$ matrix with $V$ has complexity $O(N^2 C)$. The total complexity is $O(N^2 C)$, which is quadratic in $N$.
 
 In contrast, our CMI module leverages random feature mapping to achieve linear complexity:
 
